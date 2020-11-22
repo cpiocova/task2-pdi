@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="268.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StructureElementsController">
+   <children>
+      <RadioButton layoutX="25.0" layoutY="70.0" mnemonicParsing="false" selected="true" text="Rectangular ">
+         <toggleGroup>
+            <ToggleGroup fx:id="elementTypeGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="25.0" layoutY="104.0" mnemonicParsing="false" text="Cross" toggleGroup="$elementTypeGroup" />
+      <RadioButton layoutX="25.0" layoutY="138.0" mnemonicParsing="false" text="Ellipse" toggleGroup="$elementTypeGroup" />
+      <Label layoutX="25.0" layoutY="33.0" text="Element type:" />
+      <Label layoutX="195.0" layoutY="33.0" text="Size:" />
+      <Slider fx:id="sliderToSizeX" layoutX="195.0" layoutY="82.0" majorTickUnit="1.0" max="7.0" min="1.0" minorTickCount="0" prefHeight="14.0" prefWidth="72.0" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="sliderToSizeY" layoutX="195.0" layoutY="137.0" majorTickUnit="1.0" max="7.0" min="1.0" minorTickCount="0" prefHeight="14.0" prefWidth="72.0" showTickLabels="true" showTickMarks="true" />
+      <Label layoutX="197.0" layoutY="61.0" text="X" />
+      <Label layoutX="197.0" layoutY="118.0" text="Y" />
+      <Label layoutX="345.0" layoutY="33.0" text="Pivot:" />
+      <TextField fx:id="inputCoordX" layoutX="406.0" layoutY="58.0" prefHeight="25.0" prefWidth="30.0" />
+      <Label layoutX="347.0" layoutY="61.0" text="Coord X:" />
+      <Label layoutX="347.0" layoutY="121.0" text="Coord Y:" />
+      <TextField fx:id="inputCoordY" layoutX="406.0" layoutY="118.0" prefHeight="25.0" prefWidth="30.0" />
+      <Button fx:id="setButton" defaultButton="true" layoutX="161.0" layoutY="200.0" mnemonicParsing="false" onAction="#setStructuringElement" text="Set Structuring Element" />
+      <Label fx:id="labelSizeX" layoutX="257.0" layoutY="61.0" text="1" />
+      <Label fx:id="labelSizeY" layoutX="257.0" layoutY="118.0" text="1" />
+      <Label layoutX="346.0" layoutY="164.0" text="Starting from 0" textFill="#12a3eb" />
+   </children>
+</AnchorPane>
